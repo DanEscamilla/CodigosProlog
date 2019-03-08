@@ -18,21 +18,22 @@
 
 % NOTA: utilizar "write()" para ver como trabaja el metodo que estas haciendo.
 
-imprimirHola(X):-
-  write("Entro a Condicion Termino, X:"),write(X),nl,
-  X=0,
+imprimirHola(ImpresionesFaltantes):-
+  write("Entro a Condicion Termino, ImpresionesFaltantes:"),write(ImpresionesFaltantes),nl,
+  ImpresionesFaltantes=0,
   write("Si cumplio la condicion de termino."),nl,nl.
-imprimirHola(X):-
-  write("Entro a Caso recursivo 1, X:"),write(X),nl,
-  ModuloX is mod(X,2),
-  ModuloX = 0,
+
+imprimirHola(ImpresionesFaltantes):-
+  write("Entro a Caso recursivo 1, ImpresionesFaltantes:"),write(ImpresionesFaltantes),nl,
+  ModuloImpresionesFaltantes is mod(ImpresionesFaltantes,2),
+  ModuloImpresionesFaltantes = 0,
   write("Si cumplio la condicion."),nl,
   write("Hola mundo"),nl,nl,
-  X2 is X - 1,
-  imprimirHola(X2).
+  ImpresionesFaltantes2 is ImpresionesFaltantes - 1,
+  imprimirHola(ImpresionesFaltantes2).
 
-imprimirHola(X):-
-  write("Entro a Caso recursivo 2, X:"),write(X),nl,
+imprimirHola(ImpresionesFaltantes):-
+  write("Entro a Caso recursivo 2, ImpresionesFaltantes:"),write(ImpresionesFaltantes),nl,
   write("Adios mundo"),nl,nl,
-  X2 is X - 1,
-  imprimirHola(X2).
+  ImpresionesFaltantes2 is ImpresionesFaltantes - 1,
+  imprimirHola(ImpresionesFaltantes2).
